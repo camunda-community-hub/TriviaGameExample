@@ -1,0 +1,62 @@
+{
+  "components": [
+    {
+      "text": "# Choose A Category for your Question!",
+      "type": "text",
+      "id": "Field_1ftqzme"
+    },
+    {
+      "label": "Your Name",
+      "type": "textfield",
+      "id": "Field_1lmghno",
+      "key": "name"
+    },
+    {
+      "values": [
+        {
+          "label": "Art & literature",
+          "value": "artliterature"
+        },
+        {
+          "label": "Science & Nature",
+          "value": "sciencenature"
+        },
+        {
+          "label": "General",
+          "value": "general"
+        },
+        {
+          "label": "Geography",
+          "value": "geography"
+        },
+        {
+          "label": "Entertainment",
+          "value": "entertainment"
+        }
+      ],
+      "label": "Select Your Category",
+      "type": "select",
+      "id": "Field_1alh1db",
+      "key": "category",
+      "defaultValue": "general"
+    },
+    {
+      "label": "Lives Left",
+      "type": "number",
+      "id": "Field_1qhp5d4",
+      "key": "lives",
+      "defaultValue": 3,
+      "description": "This is the number of attempts you have before you lose",
+      "disabled": false
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "36b94aa"
+  },
+  "type": "default",
+  "id": "Form_01b156d0-f169-4b07-9565-60caac1001ca",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

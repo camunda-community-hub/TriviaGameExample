@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "text": "# Result!",
+      "type": "text",
+      "id": "Field_028uw2h"
+    },
+    {
+      "label": "You Said:",
+      "type": "textfield",
+      "id": "Field_1a1s90n",
+      "key": "guess",
+      "disabled": true
+    },
+    {
+      "label": "The answer is",
+      "type": "textfield",
+      "id": "Field_1m14wt5",
+      "key": "answer",
+      "disabled": true
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "36b94aa"
+  },
+  "type": "default",
+  "id": "Form_0576a9d3-991c-429c-bcbb-46811d5e9271",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

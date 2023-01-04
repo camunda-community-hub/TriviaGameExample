@@ -1,0 +1,30 @@
+{
+  "components": [
+    {
+      "text": "# Trivia",
+      "type": "text",
+      "id": "Field_0yjwct8"
+    },
+    {
+      "label": "Question",
+      "type": "textfield",
+      "id": "Field_0crdian",
+      "key": "question"
+    },
+    {
+      "label": "Guess",
+      "type": "textfield",
+      "id": "Field_0m32o3a",
+      "key": "guess"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "36b94aa"
+  },
+  "type": "default",
+  "id": "Form_f42c07ce-6dde-4170-93b2-a29703eef94d",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}
