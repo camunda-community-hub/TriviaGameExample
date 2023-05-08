@@ -43,7 +43,7 @@ lives - 1
 
 ## How to deploy and run
 
-The easiest way to run this is to [create a free account](https://accounts.cloud.camunda.io/signup?uc=signup) for  Camunda 8 SaaS and upload the BPMN model and forms to a folder in the web modeler and then [deploy them to a cluster](https://docs.camunda.io/docs/guides/model-your-first-process/)
+The easiest way to run this is to [create a free account](https://accounts.cloud.camunda.io/signup?uc=signup) for  Camunda 8 SaaS and [upload the BPMN model and forms to a folder](https://docs.camunda.io/docs/components/modeler/web-modeler/import-diagram/) in the web modeler and then [deploy them to a cluster](https://docs.camunda.io/docs/guides/model-your-first-process/)
 
 You also need to get an API Key for the trivia service by creating an [API Ninjas account](https://api-ninjas.com). Once you do [create a secrete](https://docs.camunda.io/docs/components/connectors/use-connectors/#using-secrets) with the key called `ApiNinja`
 
