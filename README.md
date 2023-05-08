@@ -4,7 +4,7 @@ This is a simple trivia quiz game designed in BPMN and executable with Camunda 8
 
 ## The BPMN Process
 
-![process model](./img/trivagame.svg/)
+![process model](./img/processOperate.png/)
 
 The process shows that a contestant picks from a list of categories and is then asked to answer a trivia question on that category. If they get it right they collect a prize. If wrong they have 2 more chances and after that they lose the game.
 
