@@ -1,0 +1,41 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "c173d94"
+  },
+  "schemaVersion": 10,
+  "components": [
+    {
+      "text": "# Result is in...",
+      "type": "text",
+      "id": "Field_028uw2h",
+      "layout": {
+        "row": "Row_1lzqwbu"
+      }
+    },
+    {
+      "label": "You Said:",
+      "type": "textfield",
+      "id": "Field_1a1s90n",
+      "key": "guess",
+      "disabled": true,
+      "layout": {
+        "row": "Row_1gj6p6r"
+      }
+    },
+    {
+      "text": "{{openAiCheck}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ip43sx",
+        "columns": null
+      },
+      "id": "Field_1sfahpr"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0576a9d3-991c-429c-bcbb-46811d5e9271"
+}

@@ -1,0 +1,93 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "c173d94"
+  },
+  "schemaVersion": 10,
+  "components": [
+    {
+      "text": "# Trivia time for  {{name}}",
+      "type": "text",
+      "id": "Field_0yjwct8",
+      "layout": {
+        "row": "Row_0z98uf0"
+      }
+    },
+    {
+      "label": "Question",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_1tny30z",
+        "columns": null
+      },
+      "id": "Field_1syhdvk",
+      "key": "question"
+    },
+    {
+      "text": "{{openAiTranslate}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0fjhyha",
+        "columns": null
+      },
+      "id": "Field_12s9po9"
+    },
+    {
+      "text": "{{openAiHint}}",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0x6ihtd",
+        "columns": null
+      },
+      "id": "Field_11j02wc"
+    },
+    {
+      "label": "Guess",
+      "type": "textfield",
+      "id": "Field_0m32o3a",
+      "key": "guess",
+      "layout": {
+        "row": "Row_0x4rljk"
+      }
+    },
+    {
+      "label": "Need a Hint?",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0x1o9du",
+        "columns": null
+      },
+      "id": "Field_1skyl6n",
+      "key": "hint"
+    },
+    {
+      "label": "Need Translation",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1heohud",
+        "columns": null
+      },
+      "id": "Field_1smvoj8",
+      "key": "translate"
+    },
+    {
+      "label": "Lanauge to translate into",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1heohud",
+        "columns": null
+      },
+      "id": "Field_0j5hz2w",
+      "key": "language",
+      "conditional": {
+        "hide": "=translate != true"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_f42c07ce-6dde-4170-93b2-a29703eef94d"
+}
