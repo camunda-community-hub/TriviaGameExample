@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="66b1756" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.3.0" camunda:diagramRelationId="6762e50d-d72c-4557-be5d-0bce38389005">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="b55ef64" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.3.0" camunda:diagramRelationId="6762e50d-d72c-4557-be5d-0bce38389005">
   <bpmn:process id="TrivaGame" name="Triva Game" isExecutable="true">
     <bpmn:extensionElements>
       <zeebe:userTaskForm id="userTaskForm_1f9cbgu">{
@@ -529,13 +529,13 @@
         <zeebe:ioMapping>
           <zeebe:input source="noAuth" target="authentication.type" />
           <zeebe:input source="get" target="method" />
-          <zeebe:input source="20" target="connectionTimeoutInSeconds" />
-          <zeebe:input source="= {X-Api-Key: &#34;secrets.ApiNinja&#34; } " target="headers" />
           <zeebe:input source="=&#34;https://api.api-ninjas.com/v1/trivia?category=&#34; + category" target="url" />
+          <zeebe:input source="= {X-Api-Key: &#34;{{secrets.ApiNinja}}&#34; } " target="headers" />
+          <zeebe:input source="20" target="connectionTimeoutInSeconds" />
         </zeebe:ioMapping>
         <zeebe:taskHeaders>
-          <zeebe:header key="resultExpression" value="={&#10;  question: response.body.question[1],&#10;  answer: response.body.answer[1]&#10;}" />
           <zeebe:header key="resultVariable" value="triva" />
+          <zeebe:header key="resultExpression" value="={&#10;  question: response.body.question[1],&#10;  answer: response.body.answer[1]&#10;}" />
         </zeebe:taskHeaders>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_021yj4b</bpmn:incoming>
@@ -602,7 +602,6 @@
         </zeebe:ioMapping>
       </bpmn:extensionElements>
       <bpmn:incoming>Flow_16yfnhu</bpmn:incoming>
-      <bpmn:incoming>Flow_0g8kqkm</bpmn:incoming>
       <bpmn:outgoing>Flow_1yszd3t</bpmn:outgoing>
     </bpmn:intermediateThrowEvent>
     <bpmn:sequenceFlow id="Flow_1yszd3t" sourceRef="Event_1btxswh" targetRef="Gateway_1kfwlud" />
@@ -640,7 +639,7 @@
         <zeebe:taskDefinition type="io.camunda:http-json:1" />
         <zeebe:ioMapping>
           <zeebe:input source="bearer" target="authentication.type" />
-          <zeebe:input source="secrets.OpenAI" target="authentication.token" />
+          <zeebe:input source="{{secrets.OpenAI}}" target="authentication.token" />
           <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
           <zeebe:input source="chat" target="operation" />
           <zeebe:input source="post" target="method" />
@@ -667,7 +666,7 @@
         <zeebe:taskDefinition type="io.camunda:http-json:1" />
         <zeebe:ioMapping>
           <zeebe:input source="bearer" target="authentication.type" />
-          <zeebe:input source="secrets.OpenAI" target="authentication.token" />
+          <zeebe:input source="{{secrets.OpenAI}}" target="authentication.token" />
           <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
           <zeebe:input source="chat" target="operation" />
           <zeebe:input source="post" target="method" />
@@ -692,7 +691,7 @@
         <zeebe:taskDefinition type="io.camunda:http-json:1" />
         <zeebe:ioMapping>
           <zeebe:input source="bearer" target="authentication.type" />
-          <zeebe:input source="secrets.OpenAI" target="authentication.token" />
+          <zeebe:input source="{{secrets.OpenAI}}" target="authentication.token" />
           <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
           <zeebe:input source="chat" target="operation" />
           <zeebe:input source="post" target="method" />
@@ -717,7 +716,7 @@
         <zeebe:taskDefinition type="io.camunda:http-json:1" />
         <zeebe:ioMapping>
           <zeebe:input source="bearer" target="authentication.type" />
-          <zeebe:input source="secrets.OpenAI" target="authentication.token" />
+          <zeebe:input source="{{secrets.OpenAI}}" target="authentication.token" />
           <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
           <zeebe:input source="chat" target="operation" />
           <zeebe:input source="post" target="method" />
@@ -737,13 +736,6 @@
       <bpmn:outgoing>Flow_09jus2w</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_09jus2w" sourceRef="Activity_1x6gx4f" targetRef="Activity_18279w9" />
-    <bpmn:boundaryEvent id="Event_1luv2em" name="Too Long" attachedToRef="Activity_0qlph8x">
-      <bpmn:outgoing>Flow_0g8kqkm</bpmn:outgoing>
-      <bpmn:timerEventDefinition id="TimerEventDefinition_1rk20v5">
-        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT3M</bpmn:timeDuration>
-      </bpmn:timerEventDefinition>
-    </bpmn:boundaryEvent>
-    <bpmn:sequenceFlow id="Flow_0g8kqkm" sourceRef="Event_1luv2em" targetRef="Event_1btxswh" />
     <bpmn:sequenceFlow id="Flow_1pbz283" sourceRef="Gateway_0cmsd3p" targetRef="Activity_0kg8zea">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=translate</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -752,7 +744,7 @@
         <zeebe:taskDefinition type="io.camunda:http-json:1" />
         <zeebe:ioMapping>
           <zeebe:input source="bearer" target="authentication.type" />
-          <zeebe:input source="secrets.OpenAI" target="authentication.token" />
+          <zeebe:input source="{{secrets.OpenAI}}" target="authentication.token" />
           <zeebe:input source="=if is defined(internal_organization) and internal_organization != null then {&#34;Content-Type&#34;:&#34;application/json&#34;, &#34;OpenAI-Organization&#34;:internal_organization} else {&#34;Content-Type&#34;:&#34;application/json&#34;}" target="headers" />
           <zeebe:input source="chat" target="operation" />
           <zeebe:input source="post" target="method" />
@@ -914,12 +906,6 @@
           <dc:Bounds x="687" y="360" width="47" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0n9n5w5_di" bpmnElement="Event_1luv2em">
-        <dc:Bounds x="532" y="350" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="567" y="383" width="45" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1hoh7tx_di" bpmnElement="Flow_1hoh7tx">
         <di:waypoint x="370" y="328" />
         <di:waypoint x="490" y="328" />
@@ -987,11 +973,6 @@
       <bpmndi:BPMNEdge id="Flow_09jus2w_di" bpmnElement="Flow_09jus2w">
         <di:waypoint x="1670" y="328" />
         <di:waypoint x="1710" y="328" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0g8kqkm_di" bpmnElement="Flow_0g8kqkm">
-        <di:waypoint x="550" y="386" />
-        <di:waypoint x="550" y="570" />
-        <di:waypoint x="1512" y="570" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1pbz283_di" bpmnElement="Flow_1pbz283">
         <di:waypoint x="710" y="303" />
