@@ -3,9 +3,9 @@
   "executionPlatformVersion": "8.2.0",
   "exporter": {
     "name": "Camunda Web Modeler",
-    "version": "c173d94"
+    "version": "6c48892"
   },
-  "schemaVersion": 10,
+  "schemaVersion": 11,
   "components": [
     {
       "text": "# Sorry you Lost {{name}} 😢\n{{openAiLoser}}",
@@ -16,6 +16,16 @@
         "columns": null
       },
       "id": "Field_1n7ct74"
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "Row_1vmh5by",
+        "columns": null
+      },
+      "id": "Field_1dptfzb",
+      "source": "https://github.com/camunda-community-hub/TriviaGameExample/blob/main/img/Loser%20screen_donation_1200x853.png?raw=true"
     },
     {
       "label": "Image view",
