@@ -69,4 +69,4 @@ For the basic model, You just need to get an API Key for the trivia service by c
 
 Then you can start an instance from the modeler and follow complete the tasks in tasklist.
 
-For the advanced model you will also to create an [OpenAI](https://openai.com/) account and generate a API key to be used by the OpenAI connectors the key can be stored as a secrete called `OpenAI`
+For the advanced model you will also to create an [OpenAI](https://openai.com/) account and generate a API key to be used by the OpenAI connectors the key can be stored as a secret called `OpenAI`
